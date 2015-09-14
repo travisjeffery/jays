@@ -1,10 +1,10 @@
 {{#if isGame}}
-<ul>
+<ul class="item blue">
 {{#each links}}
-<li>{{item}}</li>
+<li><a href="{{this}}">{{this}}</a></li>
 {{/each}}
 </ul>
 {{else}}
-<p>No game today!</p>
+<p class="red">No on-going game!</p>
 {{/if}}
 

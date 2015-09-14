@@ -1,0 +1,42 @@
+body {
+  font-family: Futura, sans-serif;
+  font-size: 9em;
+}
+
+#body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 45vh;
+  width: 100vw;
+}
+
+img {
+  width: 45vh;
+}
+
+.blue, .blue a {
+  color: #003DA5;
+}
+
+.red {
+  color: #DA291C;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.item {
+  padding: 5px;
+}
+
+
+#logo {
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
