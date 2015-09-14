@@ -8,7 +8,7 @@ let path = require('path');
 let staticCache = require('koa-static-cache');
 let debug = require('debug')('app');
 
-const port = 3000;
+const port = (process.env.PORT || 3000);
 const url = 'https://www.reddit.com/r/mlbstreams';
 
 app.use(staticCache(path.join(__dirname, 'public'), {
