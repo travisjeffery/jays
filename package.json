@@ -7,12 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "babel": "*",
-    "x-ray": "*",
-    "underscore": "*",
-    "koa": "*",
-    "koa-handlebars": "*",
-    "koa-static-cache": "*"
+    "babel": "5.8.23",
+    "x-ray": "2.0.2",
+    "underscore": "1.8.3",
+    "koa": "1.0.0",
+    "koa-handlebars": "0.5.7",
+    "koa-static-cache": "3.1.2",
+    "debug": "*"
   },
   "author": "",
   "license": "ISC"

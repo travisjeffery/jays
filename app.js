@@ -6,6 +6,7 @@ let app = koa();
 let handlebars = require('koa-handlebars');
 let path = require('path');
 let staticCache = require('koa-static-cache');
+let debug = require('debug')('app');
 
 const port = 3000;
 const url = 'https://www.reddit.com/r/mlbstreams';
@@ -20,7 +21,9 @@ app.use(handlebars({
 }));
 
 app.use(function*(){
-  let links = yield* getLinks();
+  let links = yield getLinks();
+
+  debug('got links: %j', links);
 
   yield this.render("index", {
     links: links,
@@ -28,9 +31,15 @@ app.use(function*(){
   });
 });
 
-console.log(`app listening at :${port}`);
+debug(`booting app at :${port}`);
 
 app.listen(port);
+
+/**
+ * Scrape reddit for jays streams.
+ *
+ * @return {Array}
+ */
 
 function *getLinks() {
   let l = yield x(url, 'a.title.may-blank@href');
@@ -39,6 +48,13 @@ function *getLinks() {
   yt = uniq(yt);
   return yt;
 };
+
+/**
+ * Filter out non-youtube streams.
+ *
+ * @param {Array}
+ * @return {Array}
+ */
 
 function filter(arr) {
   return arr.filter(function(link){
