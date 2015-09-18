@@ -1,10 +1,11 @@
-{{#if isGame}}
-<ul class="item blue">
-{{#each links}}
-<li><a href="{{this}}">{{this}}</a></li>
-{{/each}}
-</ul>
-{{else}}
-<p class="red">No on-going game!</p>
-{{/if}}
+<h1>Jays Streams</h1>
 
+<ul>
+  {{#if isGame}}
+    {{#each links}}
+      <li class="blue item"><a href="{{this}}">{{this}}</a></li>
+    {{/each}}
+  {{else}}
+    <li class="red">No on-going game!</li>
+  {{/if}}
+</ul>

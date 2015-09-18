@@ -1,19 +1,16 @@
+h1 {
+  font-family: 'Sansita One', cursive;
+}
+
 body {
-  font-family: Futura, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 3em;
+  width: 50%;
+  margin: 0 auto;
 }
 
 #body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 45vh;
-  width: 100vw;
-}
-
-img {
-  width: 45vh;
+  text-align: center;
 }
 
 .blue, .blue a {
@@ -26,17 +23,9 @@ img {
 
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
 .item {
   padding: 5px;
-}
-
-
-#logo {
-  margin-top: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
