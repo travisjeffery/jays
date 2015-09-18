@@ -11,6 +11,12 @@ let debug = require('debug')('app');
 const port = (process.env.PORT || 3000);
 const url = 'https://www.reddit.com/r/mlbstreams';
 
+app.use(function*(next){
+  if (this.url == '/health')
+    return this.status = 200;
+  yield next;
+});
+
 app.use(staticCache(path.join(__dirname, 'public'), {
   maxAge: 365 * 24 * 60 * 60
 }));
