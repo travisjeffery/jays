@@ -12,6 +12,8 @@
     "x-ray": "2.0.2",
     "underscore": "1.8.3",
     "koa": "1.0.0",
+    "csv-parse": "1.0.0",
+    "bluebird": "2.10.0",
     "koa-handlebars": "0.5.7",
     "koa-static-cache": "3.1.2",
     "debug": "*"
