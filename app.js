@@ -62,7 +62,7 @@ app.use(function*(){
 
   yield this.render("index", {
     links: links,
-    isGame: false && links.length > 0,
+    isGame: links.length > 0,
     nextGame: this.nextGame
   });
 });
